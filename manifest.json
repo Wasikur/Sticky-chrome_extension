@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Sticky",
+  "version": "1.0",
+  "description": "A simple sticky note extension by Mr.Khan",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "./assets/sticky-note-logo.png",
+      "48": "./assets/sticky-note-logo.png",
+      "128": "./assets/sticky-note-logo.png"
+    }
+  },
+  "icons": {
+    "16": "./assets/sticky-note-logo.png",
+    "48": "./assets/sticky-note-logo.png",
+    "128": "./assets/sticky-note-logo.png"
+  }
+}

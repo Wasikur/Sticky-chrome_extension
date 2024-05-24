@@ -1,0 +1,210 @@
+/* Styles for the sticky notes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+    padding: 10px;
+
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+
+    img {
+        width: 30px;
+    }
+}
+
+.container {
+    min-width: 200px;
+}
+
+#notes-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+/* Sticky note container */
+.note {
+    position: relative;
+    width: 300px;
+    height: auto;
+    background-color: yellow;
+    border-radius: 5px;
+    padding: 10px;
+    padding-right: 50px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    cursor: move;
+    margin-bottom: 10px;
+    font-size: medium;
+}
+
+.note .note-number {
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+/* Button container */
+.button-container {
+    margin-left: 10px;
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+    display: flex;
+    gap: 5px;
+    padding: 2px;
+    text-align: start;
+}
+
+/* Delete button */
+.delete-button {
+    padding: 2px;
+    background-color: transparent;
+    color: rgb(254, 135, 135);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Edit button */
+.edit-button {
+    padding: 2px;
+    font-size: 8px;
+    background-color: transparent;
+    color: #4CAF50;
+}
+
+/* Button icon */
+.delete-button i,
+.edit-button i {
+    font-size: 18px;
+}
+
+/* Button hover effect */
+.delete-button:hover {
+    filter: brightness(0.9);
+    color: rgb(249, 32, 32);
+    /* Slightly darken on hover */
+}
+
+.edit-button:hover {
+    filter: brightness(0.9);
+    color: #2c6f2f;
+    /* Slightly darken on hover */
+}
+
+/* Button focus effect */
+.delete-button:focus,
+.edit-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+    /* Black focus border */
+}
+
+/* General button styling */
+button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Button to add new note */
+#add-note {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Add Note button hover effect */
+#add-note:hover {
+    background-color: #45a049;
+}
+
+/* Container button hover effect */
+.button-container button:hover {
+    filter: brightness(1.2);
+    /* Increase brightness on hover */
+}
+
+/* Container button focus effect */
+.button-container button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.5);
+}
+
+/* Edit dialog styling */
+#note-edit-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 300px;
+}
+
+.note-edit-dialog textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.note-edit-dialog button,
+.note-entry-dialog button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.note-edit-dialog .confirm-button,
+.note-entry-dialog .confirm-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.note-edit-dialog .confirm-button:hover,
+.note-entry-dialog .confirm-button:hover {
+    background-color: #45a049;
+}
+
+.note-edit-dialog .cancel-button,
+.note-entry-dialog .cancel-button {
+    background-color: #ff4444;
+    color: white;
+}
+
+.note-edit-dialog .cancel-button:hover,
+.note-entry-dialog .cancel-button:hover {
+    background-color: #cc0000;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    align-items: center;
+}
